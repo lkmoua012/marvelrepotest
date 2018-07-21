@@ -11,8 +11,8 @@ $(function() {
       }).then(function(response) {
 
         var portrait = (response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension);
-        var thumbPath = response.data.results[0].thumbnail.path;
-        var thumbExt = response.data.results[0].thumbnail.extension;
+      // var thumbPath = response.data.results[0].thumbnail.path;
+      // var thumbExt = response.data.results[0].thumbnail.extension;
 
         $(".portrait").append(portrait);
         $(".charName").append(response.data.results[0].name);
@@ -20,8 +20,8 @@ $(function() {
 
         console.log(response);
         console.log(portrait);
-        console.log(thumbPath);
-        console.log(thumbExt);
+       // console.log(thumbPath);
+       // console.log(thumbExt);
     
       });
       //^ End of AJAX
