@@ -8,11 +8,10 @@ $(function() {
         method: "GET"
       }).then(function(response) {
         console.log(response);
+        $(".charName").append(response.data[4].name);
     
       });
       //^ End of AJAX
-
-      $(".charName").append(response.data[4].name);
 
 });
 //^ End of Document Ready
