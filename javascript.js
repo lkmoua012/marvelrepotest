@@ -1,8 +1,6 @@
 $(function() {
-    console.log( 'ready!' );
 
     var charName = "";
-
     var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=daredevil&apikey=3729b58ef60ba8affe97db66144af1c2";
 
     $.ajax({
