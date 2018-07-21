@@ -9,10 +9,12 @@ $(function() {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        var thumbnail = (response.data.results[0].thumbnail[0] + response.data.results[0].thumbnail[1]);
+        var thumbnail = (response.data.results[0].thumbnail[1] + response.data.results[0].thumbnail[0]);
         console.log(response);
-        $(".charName").append(response.data.results[0].name);
         $(".charName").append(thumbnail);
+        $(".charName").append(response.data.results[0].name);
+        $(".charName").append(response.data.results[0].description);
+        console.log(thumbnail);
     
       });
       //^ End of AJAX
