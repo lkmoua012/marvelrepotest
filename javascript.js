@@ -9,9 +9,9 @@ $(function() {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        var thumbnail = (response.data[4].thumbnail[0] + response.data[4].thumbnail[1]);
+        var thumbnail = (response.data.results[0].thumbnail[0] + response.data.results[0].thumbnail[1]);
         console.log(response);
-        $(".charName").append(response.data.results[2]);
+        $(".charName").append(response.data.results[0].name);
         $(".charName").append(thumbnail);
     
       });
