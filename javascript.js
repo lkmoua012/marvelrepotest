@@ -11,7 +11,7 @@ $(function() {
       }).then(function(response) {
         var thumbnail = (response.data[4].thumbnail[0] + response.data[4].thumbnail[1]);
         console.log(response);
-        $(".charName").append(response.data[4].name);
+        $(".charName").append(response.data.results[2]);
         $(".charName").append(thumbnail);
     
       });
