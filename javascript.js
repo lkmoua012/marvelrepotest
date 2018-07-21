@@ -11,18 +11,14 @@ $(function() {
       }).then(function(response) {
 
         var portrait = (response.data.results[0].thumbnail.path + "." + response.data.results[0].thumbnail.extension);
-      // var thumbPath = response.data.results[0].thumbnail.path;
-      // var thumbExt = response.data.results[0].thumbnail.extension;
 
-        $(".portrait").append(portrait);
+        $(".portrait").append("<img src='" + portrait + "' />");
         $(".charName").append(response.data.results[0].name);
         $(".description").append(response.data.results[0].description);
 
         console.log(response);
         console.log(portrait);
-       // console.log(thumbPath);
-       // console.log(thumbExt);
-    
+
       });
       //^ End of AJAX
 
