@@ -13,7 +13,7 @@ $(function() {
         console.log(response);
         $(".charName").append(thumbnail);
         $(".charName").append(response.data.results[0].name);
-        $(".charName").append(response.data.results[0].description);
+        $(".description").append(response.data.results[0].description);
         console.log(thumbnail);
     
       });
